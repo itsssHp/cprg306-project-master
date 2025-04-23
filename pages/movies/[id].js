@@ -10,7 +10,7 @@ import {
   addDoc,
 } from "firebase/firestore";
 import { getAuth, onAuthStateChanged } from "firebase/auth"; // Import Firebase Authentication
-
+import Image from "next/image";
 const MovieDetails = () => {
   const router = useRouter();
   const { id } = router.query; // Extract movie ID from the URL
@@ -136,7 +136,7 @@ const MovieDetails = () => {
     <div style={styles.container}>
       <div style={styles.content}>
         <h1 style={styles.title}>{movie.title}</h1>
-        <img src={posterUrl} alt={movie.title} style={styles.poster} />
+        <Image src={posterUrl} alt={movie.title} style={styles.poster} />
         <p style={styles.overview}>{movie.overview}</p>
         <div style={styles.details}>
           <p>

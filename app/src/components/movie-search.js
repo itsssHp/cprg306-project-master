@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Link from "next/link";
-
+import Image from "next/image";
 const MovieSearch = () => {
   const [query, setQuery] = useState("");
   const [movies, setMovies] = useState([]);
@@ -89,7 +89,7 @@ const MovieSearch = () => {
               href={`/movies/${movie.id}`}
               style={{ textDecoration: "none", color: "inherit" }}
             >
-              <img
+              <Image
                 src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`}
                 alt={movie.title}
                 style={{
